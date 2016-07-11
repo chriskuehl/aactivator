@@ -16,6 +16,8 @@ env:
     - MAKE_TARGET=itest_stretch
 
 before_install:
+    - docker info
+    - docker --version
     - pip install tox
     - sudo apt-get install -y --no-install-recommends zsh
     # write-safety tests fail otherwise
